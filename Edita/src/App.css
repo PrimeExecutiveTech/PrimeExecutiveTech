@@ -1,0 +1,168 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.editor-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  color: #2d3436;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.editor-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.editor-header p {
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.header-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.new-file-btn, .preview-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.new-file-btn {
+  background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+  color: white;
+}
+
+.preview-btn {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  color: white;
+}
+
+.new-file-btn:hover, .preview-btn:hover {
+  transform: translateY(-2px);
+}
+
+.theme-selector {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.editor-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.file-tabs {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  overflow-x: auto;
+}
+
+.file-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #e9ecef;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 120px;
+  position: relative;
+}
+
+.file-tab:hover {
+  background: #dee2e6;
+}
+
+.file-tab.active {
+  background: white;
+  border-bottom: 2px solid #74b9ff;
+}
+
+.file-icon {
+  font-size: 1.1rem;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.close-tab, .download-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.close-tab:hover {
+  background: #ff6b6b;
+  color: white;
+  opacity: 1;
+}
+
+.download-btn:hover {
+  background: #74b9ff;
+  color: white;
+  opacity: 1;
+}
+
+.editor-wrapper {
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  .editor-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .header-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .file-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .file-tab {
+    min-width: 100px;
+  }
+}
