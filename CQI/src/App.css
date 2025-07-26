@@ -1,0 +1,136 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.chat-header p {
+  margin: 5px 0 0 0;
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.messages-container {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  max-height: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  text-align: left;
+  border-left: 4px solid #667eea;
+}
+
+.own-message {
+  background: #e3f2fd;
+  border-left-color: #2196f3;
+  margin-left: 50px;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.username {
+  font-weight: bold;
+  color: #667eea;
+}
+
+.timestamp {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.message-text {
+  color: #333;
+  line-height: 1.4;
+}
+
+.message-form {
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.username-input {
+  flex: 0 0 120px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.message-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.message-input:focus,
+.username-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.send-button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.send-button:hover {
+  transform: translateY(-2px);
+}
+
+.send-button:active {
+  transform: translateY(0);
+}
