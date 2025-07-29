@@ -1,0 +1,61 @@
+.call-directory {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  color: white;
+  backdrop-filter: blur(8px);
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.user-row {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.user-row:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user-name {
+  flex: 1;
+}
+
+.call-btn {
+  background: #5f4fd8;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.call-btn:hover {
+  background: #837eff;
+}

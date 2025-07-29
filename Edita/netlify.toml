@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
+[dev]
+  command = "pnpm run start"
+  port = 3000
+  targetPort = 3000
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
